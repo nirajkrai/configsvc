@@ -1,0 +1,14 @@
+server:
+  port: 8888   
+  
+spring:
+  cloud:
+    config:
+      server:
+        git:
+#          uri: https://github.com/XXX/microservices-cloud-config
+# While in development mode, you can configure the config server to pick up configuration files from the file system
+           uri: file:///${user.home}/configdemo
+# Defines the port where the config server is running so that rest of the services can pick up 
+# their external configurations
+       
